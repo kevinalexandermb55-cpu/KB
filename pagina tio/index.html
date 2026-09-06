@@ -1,0 +1,1752 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>KB Asesoría Contable y Financiera</title>
+
+  <meta
+    name="description"
+    content="KB Asesoría Contable y Financiera. Servicios contables, financieros, tributarios y capacitaciones para personas y empresas."
+  >
+
+  <style>
+    :root {
+      --azul: #071a33;
+      --azul-2: #0d294d;
+      --azul-3: #12385f;
+      --dorado: #c9a227;
+      --dorado-claro: #e6c75a;
+      --blanco: #ffffff;
+      --gris: #f4f6f8;
+      --gris-texto: #667085;
+      --negro: #111827;
+      --verde: #25D366;
+      --sombra: 0 15px 40px rgba(0, 0, 0, 0.10);
+      --radio: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--negro);
+      background: var(--blanco);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    textarea {
+      font-family: inherit;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(7, 26, 51, 0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .nav {
+      width: min(1180px, 92%);
+      min-height: 70px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--blanco);
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .brand span {
+      display: block;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      line-height: 1.15;
+    }
+
+    .brand small {
+      display: block;
+      margin-top: 4px;
+      font-size: 9px;
+      font-weight: 500;
+      letter-spacing: 1.7px;
+      color: var(--dorado-claro);
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .menu a {
+      color: #e9edf4;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .menu a:hover {
+      color: var(--dorado-claro);
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .search input {
+      width: 140px;
+      height: 34px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 0 10px;
+      outline: none;
+      background: rgba(255, 255, 255, 0.08);
+      color: white;
+      font-size: 12px;
+    }
+
+    .search input::placeholder {
+      color: #b9c2cf;
+    }
+
+    .search button {
+      height: 34px;
+      padding: 0 12px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--dorado);
+      color: var(--azul);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .hamburger {
+      display: none;
+      color: white;
+      font-size: 25px;
+      cursor: pointer;
+      border: 0;
+      background: transparent;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(7, 26, 51, 0.98),
+          rgba(13, 41, 77, 0.96)
+        );
+      color: white;
+      padding: 55px 0 45px;
+    }
+
+    .hero-inner {
+      width: min(1180px, 92%);
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 14px;
+      color: var(--dorado-claro);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 720px;
+      margin-bottom: 18px;
+      font-size: clamp(2.2rem, 4vw, 3.6rem);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+    }
+
+    .hero h1 span {
+      color: var(--dorado-claro);
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin-bottom: 25px;
+      color: #dce4ee;
+      font-size: 16px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 12px 20px;
+      border-radius: 9px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: var(--dorado);
+      color: var(--azul);
+    }
+
+    .btn-primary:hover {
+      background: var(--dorado-claro);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: white;
+    }
+
+    .logo-card {
+      min-height: 350px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.97);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.22);
+    }
+
+    .logo-card img {
+      width: 100%;
+      max-width: 330px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* =========================
+       SECCIONES
+    ========================= */
+
+    section {
+      padding: 55px 0;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin: 0 auto 35px;
+      text-align: center;
+    }
+
+    .section-head span {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--dorado);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+    }
+
+    .section-head h2 {
+      margin-bottom: 10px;
+      color: var(--azul);
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      line-height: 1.15;
+    }
+
+    .section-head p {
+      color: var(--gris-texto);
+      font-size: 14px;
+    }
+
+    /* =========================
+       SERVICIOS
+    ========================= */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 17px;
+    }
+
+    .card {
+      padding: 22px;
+      background: white;
+      border: 1px solid #e8ebef;
+      border-radius: var(--radio);
+      box-shadow: var(--sombra);
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(201, 162, 39, 0.45);
+    }
+
+    .card-icon {
+      width: 42px;
+      height: 42px;
+      margin-bottom: 15px;
+      border-radius: 11px;
+      display: grid;
+      place-items: center;
+      background: #f8f1d9;
+      color: var(--dorado);
+      font-size: 20px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      color: var(--azul);
+      font-size: 18px;
+    }
+
+    .card p {
+      color: var(--gris-texto);
+      font-size: 14px;
+    }
+
+    /* =========================
+       FONDO GRIS
+    ========================= */
+
+    .light-section {
+      background: var(--gris);
+    }
+
+    /* =========================
+       CAPACITACIONES
+    ========================= */
+
+    .training-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 17px;
+    }
+
+    .training {
+      overflow: hidden;
+      border-radius: var(--radio);
+      background: white;
+      border: 1px solid #e5e7eb;
+      box-shadow: var(--sombra);
+    }
+
+    .training-top {
+      padding: 20px;
+      background: var(--azul);
+      color: white;
+    }
+
+    .training-top h3 {
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    .training-body {
+      padding: 20px;
+    }
+
+    .training-body p {
+      margin-bottom: 14px;
+      color: var(--gris-texto);
+      font-size: 14px;
+    }
+
+    .training-body ul {
+      padding-left: 18px;
+      color: #4b5563;
+      font-size: 13px;
+    }
+
+    .training-body li {
+      margin-bottom: 5px;
+    }
+
+    /* =========================
+       COMBOS / PRECIOS
+    ========================= */
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 17px;
+    }
+
+    .price-card {
+      padding: 25px;
+      border-radius: var(--radio);
+      background: white;
+      border: 1px solid #e4e7eb;
+      box-shadow: var(--sombra);
+      position: relative;
+    }
+
+    .price-card.featured {
+      border: 2px solid var(--dorado);
+    }
+
+    .badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      padding: 5px 9px;
+      border-radius: 20px;
+      background: var(--dorado);
+      color: var(--azul);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .price-card h3 {
+      margin-bottom: 10px;
+      color: var(--azul);
+      font-size: 18px;
+    }
+
+    .price {
+      margin-bottom: 15px;
+    }
+
+    .price strong {
+      color: var(--dorado);
+      font-size: 23px;
+    }
+
+    .price span {
+      color: var(--gris-texto);
+      font-size: 12px;
+    }
+
+    .price-card ul {
+      padding-left: 18px;
+      margin-bottom: 20px;
+      color: #4b5563;
+      font-size: 13px;
+    }
+
+    .price-card li {
+      margin-bottom: 6px;
+    }
+
+    /* =========================
+       PANEL
+    ========================= */
+
+    .panel {
+      padding: 25px;
+      border-radius: var(--radio);
+      background: var(--azul);
+      color: white;
+      box-shadow: var(--sombra);
+    }
+
+    .panel h3 {
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .panel p {
+      color: #d9e2ec;
+      font-size: 14px;
+    }
+
+    /* =========================
+       CONTACTO
+    ========================= */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      margin-bottom: 12px;
+      color: var(--azul);
+      font-size: 23px;
+    }
+
+    .contact-info > p {
+      margin-bottom: 22px;
+      color: var(--gris-texto);
+      font-size: 14px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 17px;
+    }
+
+    .contact-item-icon {
+      flex-shrink: 0;
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 9px;
+      background: #f8f1d9;
+      color: var(--dorado);
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--azul);
+      font-size: 14px;
+    }
+
+    .contact-item span {
+      color: var(--gris-texto);
+      font-size: 13px;
+    }
+
+    .contact-form {
+      padding: 25px;
+      border: 1px solid #e5e7eb;
+      border-radius: var(--radio);
+      background: white;
+      box-shadow: var(--sombra);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 13px;
+    }
+
+    .field {
+      margin-bottom: 14px;
+    }
+
+    .field label {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--azul);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .field input,
+    .field textarea,
+    .field select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #d9dee6;
+      border-radius: 9px;
+      outline: none;
+      background: white;
+      color: var(--negro);
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    .field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus {
+      border-color: var(--dorado);
+      box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.12);
+    }
+
+    .form-note {
+      margin-top: 10px;
+      color: var(--gris-texto);
+      font-size: 11px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 30px 0;
+      background: #041225;
+      color: #c8d1dc;
+    }
+
+    .footer-inner {
+      width: min(1180px, 92%);
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      color: white;
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .footer-brand span {
+      color: var(--dorado-claro);
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: #98a5b5;
+    }
+
+    /* =========================
+       WHATSAPP
+    ========================= */
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 2000;
+
+      width: 58px;
+      height: 58px;
+
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--verde);
+
+      box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.35);
+
+      border: 3px solid white;
+
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .whatsapp img {
+      width: 34px;
+      height: 34px;
+      display: block;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    .whatsapp:focus-visible {
+      outline: 3px solid var(--dorado-claro);
+      outline-offset: 4px;
+    }
+
+    /* =========================
+       RESULTADO BÚSQUEDA
+    ========================= */
+
+    .search-message {
+      width: min(1180px, 92%);
+      margin: 15px auto 0;
+      padding: 12px 15px;
+      border-radius: 8px;
+      background: #fff8dc;
+      color: #624d00;
+      font-size: 13px;
+      display: none;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 980px) {
+      .menu {
+        gap: 14px;
+      }
+
+      .search input {
+        width: 110px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .logo-card {
+        width: min(520px, 100%);
+        min-height: 320px;
+        margin: auto;
+      }
+
+      .cards,
+      .training-grid,
+      .price-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        min-height: 64px;
+      }
+
+      .menu,
+      .search {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .hero {
+        padding: 42px 0 35px;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .logo-card {
+        min-height: 280px;
+        padding: 22px;
+      }
+
+      section {
+        padding: 45px 0;
+      }
+
+      .cards,
+      .training-grid,
+      .price-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .whatsapp {
+        width: 54px;
+        height: 54px;
+        right: 15px;
+        bottom: 15px;
+      }
+
+      .whatsapp img {
+        width: 31px;
+        height: 31px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+    <nav class="nav">
+
+      <a href="#inicio" class="brand">
+        <span>
+          KB ASESORÍA
+          <small>CONTABLE Y FINANCIERA</small>
+        </span>
+      </a>
+
+      <div class="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#capacitaciones">Capacitaciones</a>
+        <a href="#combos">Combos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+      <div class="search">
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Buscar..."
+          aria-label="Buscar en el sitio"
+        >
+        <button type="button" id="searchButton">
+          Buscar
+        </button>
+      </div>
+
+      <button
+        class="hamburger"
+        type="button"
+        id="menuButton"
+        aria-label="Abrir menú"
+      >
+        ☰
+      </button>
+
+    </nav>
+  </header>
+
+  <div class="search-message" id="searchMessage"></div>
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <main>
+
+    <section class="hero" id="inicio">
+      <div class="hero-inner">
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            Asesoría profesional
+          </span>
+
+          <h1>
+            Tu tranquilidad financiera,
+            <span>nuestra prioridad.</span>
+          </h1>
+
+          <p>
+            Soluciones contables y financieras para personas y empresas,
+            con acompañamiento profesional, claridad y confianza.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#contacto" class="btn btn-primary">
+              Solicitar asesoría
+            </a>
+
+            <a href="#servicios" class="btn btn-outline">
+              Ver servicios
+            </a>
+          </div>
+
+        </div>
+
+        <!-- LOGO GRANDE: SE CONSERVA -->
+        <div class="logo-card">
+          <img
+            src="img/logo-KB.png"
+            alt="KB Asesoría Contable y Financiera"
+          >
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================
+         SERVICIOS
+    ========================= -->
+
+    <section id="servicios">
+      <div class="container">
+
+        <div class="section-head">
+          <span>Lo que hacemos</span>
+
+          <h2>
+            Servicios contables y financieros
+          </h2>
+
+          <p>
+            Acompañamiento profesional para ayudarte a organizar,
+            controlar y tomar mejores decisiones financieras.
+          </p>
+        </div>
+
+        <div class="cards">
+
+          <article class="card">
+            <div class="card-icon">▣</div>
+
+            <h3>
+              Contabilidad
+            </h3>
+
+            <p>
+              Organización y manejo de la información contable
+              para personas naturales y empresas.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">◈</div>
+
+            <h3>
+              Asesoría financiera
+            </h3>
+
+            <p>
+              Análisis financiero para mejorar el control,
+              la planeación y la toma de decisiones.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">✓</div>
+
+            <h3>
+              Asesoría tributaria
+            </h3>
+
+            <p>
+              Orientación para el adecuado cumplimiento
+              de las obligaciones tributarias.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">▤</div>
+
+            <h3>
+              Declaraciones
+            </h3>
+
+            <p>
+              Acompañamiento en la preparación y revisión
+              de declaraciones y obligaciones fiscales.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">◫</div>
+
+            <h3>
+              Nómina
+            </h3>
+
+            <p>
+              Apoyo en la gestión y organización de procesos
+              relacionados con nómina.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">↗️</div>
+
+            <h3>
+              Planeación
+            </h3>
+
+            <p>
+              Herramientas para proyectar escenarios y
+              fortalecer la salud financiera de tu negocio.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         CAPACITACIONES
+    ========================= -->
+
+    <section
+      id="capacitaciones"
+      class="light-section"
+    >
+      <div class="container">
+
+        <div class="section-head">
+          <span>Formación</span>
+
+          <h2>
+            Capacitaciones
+          </h2>
+
+          <p>
+            Aprende herramientas prácticas para comprender
+            mejor las finanzas y la contabilidad.
+          </p>
+        </div>
+
+        <div class="training-grid">
+
+          <article class="training">
+
+            <div class="training-top">
+              <h3>
+                Finanzas personales
+              </h3>
+            </div>
+
+            <div class="training-body">
+              <p>
+                Aprende a organizar tus ingresos, gastos,
+                ahorro y metas financieras.
+              </p>
+
+              <ul>
+                <li>Presupuesto personal</li>
+                <li>Control de gastos</li>
+                <li>Ahorro y metas</li>
+                <li>Planeación financiera</li>
+              </ul>
+            </div>
+
+          </article>
+
+          <article class="training">
+
+            <div class="training-top">
+              <h3>
+                Finanzas para emprendedores
+              </h3>
+            </div>
+
+            <div class="training-body">
+              <p>
+                Conoce las herramientas financieras necesarias
+                para administrar mejor tu emprendimiento.
+              </p>
+
+              <ul>
+                <li>Costos y gastos</li>
+                <li>Flujo de caja</li>
+                <li>Rentabilidad</li>
+                <li>Indicadores básicos</li>
+              </ul>
+            </div>
+
+          </article>
+
+          <article class="training">
+
+            <div class="training-top">
+              <h3>
+                Fundamentos contables
+              </h3>
+            </div>
+
+            <div class="training-body">
+              <p>
+                Comprende los conceptos esenciales de la
+                contabilidad aplicados a la realidad empresarial.
+              </p>
+
+              <ul>
+                <li>Conceptos contables</li>
+                <li>Estados financieros</li>
+                <li>Activos y pasivos</li>
+                <li>Interpretación básica</li>
+              </ul>
+            </div>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         COMBOS
+    ========================= -->
+
+    <section id="combos">
+      <div class="container">
+
+        <div class="section-head">
+          <span>Soluciones</span>
+
+          <h2>
+            Combos de asesoría
+          </h2>
+
+          <p>
+            Elige la alternativa que mejor se adapte
+            a tus necesidades.
+          </p>
+        </div>
+
+        <div class="price-grid">
+
+          <article class="price-card">
+
+            <h3>
+              Plan Básico
+            </h3>
+
+            <div class="price">
+              <strong>
+                Cotizar
+              </strong>
+
+              <span>
+                según necesidad
+              </span>
+            </div>
+
+            <ul>
+              <li>Orientación contable</li>
+              <li>Revisión básica</li>
+              <li>Asesoría personalizada</li>
+              <li>Acompañamiento profesional</li>
+            </ul>
+
+            <a
+              href="#contacto"
+              class="btn btn-primary"
+            >
+              Solicitar información
+            </a>
+
+          </article>
+
+          <article class="price-card featured">
+
+            <div class="badge">
+              Recomendado
+            </div>
+
+            <h3>
+              Plan Integral
+            </h3>
+
+            <div class="price">
+              <strong>
+                Cotizar
+              </strong>
+
+              <span>
+                según necesidad
+              </span>
+            </div>
+
+            <ul>
+              <li>Asesoría contable</li>
+              <li>Planeación financiera</li>
+              <li>Orientación tributaria</li>
+              <li>Seguimiento personalizado</li>
+            </ul>
+
+            <a
+              href="#contacto"
+              class="btn btn-primary"
+            >
+              Solicitar información
+            </a>
+
+          </article>
+
+          <article class="price-card">
+
+            <h3>
+              Plan Empresarial
+            </h3>
+
+            <div class="price">
+              <strong>
+                Cotizar
+              </strong>
+
+              <span>
+                según necesidad
+              </span>
+            </div>
+
+            <ul>
+              <li>Diagnóstico empresarial</li>
+              <li>Contabilidad</li>
+              <li>Análisis financiero</li>
+              <li>Planeación y acompañamiento</li>
+            </ul>
+
+            <a
+              href="#contacto"
+              class="btn btn-primary"
+            >
+              Solicitar información
+            </a>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         PANEL
+    ========================= -->
+
+    <section class="light-section">
+      <div class="container">
+
+        <div class="panel">
+
+          <h3>
+            ¿Necesitas una solución personalizada?
+          </h3>
+
+          <p>
+            Cuéntanos qué necesitas y evaluaremos contigo
+            la mejor alternativa de asesoría contable
+            o financiera.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================
+         CONTACTO
+    ========================= -->
+
+    <section id="contacto">
+      <div class="container">
+
+        <div class="section-head">
+          <span>Hablemos</span>
+
+          <h2>
+            Solicita tu asesoría
+          </h2>
+
+          <p>
+            Déjanos tus datos y nos pondremos en contacto contigo.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-info">
+
+            <h3>
+              Estamos para ayudarte
+            </h3>
+
+            <p>
+              Recibe orientación profesional para organizar
+              y fortalecer tus finanzas.
+            </p>
+
+            <div class="contact-item">
+
+              <div class="contact-item-icon">
+                ☎️
+              </div>
+
+              <div>
+                <strong>
+                  WhatsApp
+                </strong>
+
+                <span>
+                  313 499 5760
+                </span>
+              </div>
+
+            </div>
+
+            <div class="contact-item">
+
+              <div class="contact-item-icon">
+                ✉️
+              </div>
+
+              <div>
+                <strong>
+                  Atención
+                </strong>
+
+                <span>
+                  Por formulario de contacto
+                </span>
+              </div>
+
+            </div>
+
+            <div class="contact-item">
+
+              <div class="contact-item-icon">
+                ✓
+              </div>
+
+              <div>
+                <strong>
+                  Atención personalizada
+                </strong>
+
+                <span>
+                  Soluciones adaptadas a tus necesidades
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+          <form
+            class="contact-form"
+            id="contactForm"
+          >
+
+            <div class="form-row">
+
+              <div class="field">
+                <label for="nombre">
+                  Nombre
+                </label>
+
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Tu nombre"
+                  required
+                >
+              </div>
+
+              <div class="field">
+                <label for="telefono">
+                  Teléfono
+                </label>
+
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  placeholder="Tu teléfono"
+                  required
+                >
+              </div>
+
+            </div>
+
+            <div class="field">
+
+              <label for="email">
+                Correo electrónico
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="tu@email.com"
+                required
+              >
+
+            </div>
+
+            <div class="field">
+
+              <label for="servicio">
+                Servicio de interés
+              </label>
+
+              <select
+                id="servicio"
+                name="servicio"
+              >
+                <option value="">
+                  Selecciona una opción
+                </option>
+
+                <option value="Contabilidad">
+                  Contabilidad
+                </option>
+
+                <option value="Asesoría financiera">
+                  Asesoría financiera
+                </option>
+
+                <option value="Asesoría tributaria">
+                  Asesoría tributaria
+                </option>
+
+                <option value="Capacitación">
+                  Capacitación
+                </option>
+
+                <option value="Combo de asesoría">
+                  Combo de asesoría
+                </option>
+
+                <option value="Otro">
+                  Otro
+                </option>
+              </select>
+
+            </div>
+
+            <div class="field">
+
+              <label for="mensaje">
+                Mensaje
+              </label>
+
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                placeholder="Cuéntanos brevemente qué necesitas..."
+                required
+              ></textarea>
+
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary"
+            >
+              Enviar por WhatsApp
+            </button>
+
+            <p class="form-note">
+              Al enviar, se abrirá WhatsApp con la información
+              que hayas diligenciado.
+            </p>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        KB <span>ASESORÍA</span>
+      </div>
+
+      <div class="footer-copy">
+        © 2026 KB Asesoría Contable y Financiera.
+        Todos los derechos reservados.
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- =========================
+       BOTÓN WHATSAPP
+  ========================= -->
+
+  <a
+    class="whatsapp"
+    href="https://wa.me/573134995760"
+    target="_blank"
+    rel="noopener"
+    aria-label="Contactar por WhatsApp"
+  >
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      alt="WhatsApp"
+    >
+  </a>
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    /* =========================
+       FORMULARIO → WHATSAPP
+    ========================= */
+
+    const contactForm = document.getElementById("contactForm");
+
+    contactForm.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      const nombre =
+        document.getElementById("nombre").value.trim();
+
+      const telefono =
+        document.getElementById("telefono").value.trim();
+
+      const email =
+        document.getElementById("email").value.trim();
+
+      const servicio =
+        document.getElementById("servicio").value.trim();
+
+      const mensaje =
+        document.getElementById("mensaje").value.trim();
+
+      const texto =
+        "Hola, KB Asesoría Contable y Financiera.%0A%0A" +
+
+        "Nombre: " +
+        encodeURIComponent(nombre) +
+
+        "%0ATeléfono: " +
+        encodeURIComponent(telefono) +
+
+        "%0ACorreo: " +
+        encodeURIComponent(email) +
+
+        "%0AServicio de interés: " +
+        encodeURIComponent(servicio) +
+
+        "%0A%0AMensaje:%0A" +
+        encodeURIComponent(mensaje);
+
+      const whatsappUrl =
+        "https://wa.me/573214290887?text=" + texto;
+
+      window.open(
+        whatsappUrl,
+        "_blank",
+        "noopener"
+      );
+
+    });
+
+
+    /* =========================
+       BUSCADOR
+    ========================= */
+
+    const searchInput =
+      document.getElementById("searchInput");
+
+    const searchButton =
+      document.getElementById("searchButton");
+
+    const searchMessage =
+      document.getElementById("searchMessage");
+
+    const searchableSections = [
+      ...document.querySelectorAll(
+        "main section, .card, .training, .price-card"
+      )
+    ];
+
+    function performSearch() {
+
+      const query =
+        searchInput.value.trim().toLowerCase();
+
+      if (!query) {
+        searchMessage.style.display = "none";
+        return;
+      }
+
+      let found = false;
+
+      searchableSections.forEach(function(element) {
+
+        const text =
+          element.innerText.toLowerCase();
+
+        if (text.includes(query)) {
+
+          found = true;
+
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+
+        }
+
+      });
+
+      if (found) {
+
+        searchMessage.style.display = "block";
+
+        searchMessage.textContent =
+          "Se encontraron resultados relacionados con: " +
+          searchInput.value;
+
+      } else {
+
+        searchMessage.style.display = "block";
+
+        searchMessage.textContent =
+          "No encontramos resultados para: " +
+          searchInput.value;
+
+      }
+
+    }
+
+    searchButton.addEventListener(
+      "click",
+      performSearch
+    );
+
+    searchInput.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Enter") {
+          performSearch();
+        }
+
+      }
+    );
+
+
+    /* =========================
+       MENÚ MÓVIL
+    ========================= */
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const menu =
+      document.querySelector(".menu");
+
+    menuButton.addEventListener(
+      "click",
+      function() {
+
+        const isOpen =
+          menu.style.display === "flex";
+
+        if (isOpen) {
+
+          menu.style.display = "none";
+
+        } else {
+
+          menu.style.position = "absolute";
+          menu.style.top = "64px";
+          menu.style.left = "0";
+          menu.style.right = "0";
+          menu.style.padding = "18px 5%";
+          menu.style.background = "#071a33";
+          menu.style.flexDirection = "column";
+          menu.style.alignItems = "flex-start";
+          menu.style.gap = "15px";
+          menu.style.display = "flex";
+
+        }
+
+      }
+    );
+
+
+    /* =========================
+       CERRAR MENÚ AL HACER CLICK
+    ========================= */
+
+    document.querySelectorAll(".menu a").forEach(
+      function(link) {
+
+        link.addEventListener(
+          "click",
+          function() {
+
+            if (window.innerWidth <= 760) {
+              menu.style.display = "none";
+            }
+
+          }
+        );
+
+      }
+    );
+
+  </script>
+
+</body>
+</html>
